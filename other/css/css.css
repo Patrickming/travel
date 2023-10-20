@@ -4,8 +4,8 @@
 	padding: 0;
 }
 body {
-background-image: url('background.jpg');
-opacity: 0.9; /* 设置透明度为0.9 */
+	background-image: url('background.jpg');
+	opacity: 0.9; /* 设置透明度为0.9 */
 	min-width: 1000px;
 	margin: 0 auto;
 	font-size: 14px;
@@ -14,6 +14,10 @@ opacity: 0.9; /* 设置透明度为0.9 */
 	text-align: justify;
 	color: #010000;
 	position: relative;
+
+	background-repeat: no-repeat;/* 设置背景固定 */
+  	background-size: cover;
+  	background-attachment: fixed;
 }
 h1, h2, h3 {
 	font-weight: 500;
@@ -172,14 +176,42 @@ header .nav li a {
 	font-size: 20px;
 	color: #fff;
 }
-.text_a {
+
+/* 容器内包含若干文字+图片，图片显示在最左侧*/
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+
+	background-color: rgba(154, 226, 248, 0.8);
+  	border-radius: 20px;
+  }
+  
+  .item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+	padding: 10px;
+	margin: 20px;
+  }
+  
+  .item-text {
+	display: flex;
+	flex-direction: column;
+  }
+
+  .item-text p{
 	text-indent: 2em;
-	line-height: 28px;
-	color: #333;
-}
-.text_a img {
-	margin-left: 15px;
-}
+  }
+  
+  .item-image {
+	margin-left: 40px;
+  }
+  
+
+
 footer {
 	background: #cf2212;
 	line-height: 60px;
