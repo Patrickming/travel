@@ -1,0 +1,427 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/wangye5.css">
+    <script src="../js/jquery-3.3.1.slim.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <!-- <script src="../js/5_popper.js"></script> -->
+    <script src="../js/index.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            /* 初始化 */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            /* 100%的窗口高度 */
+            height: 100vh;
+            /* 弹性布局 水平+垂直居中 */
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(200deg, #517fa4, #243949);
+            /* background-image: url("D:\\Bootstrap\\Myhtml\\image\\01.webp"); */
+            /* background-repeat: no-repeat; */
+            /* background: fixed; */
+        }
+
+        .card {
+            float: left;
+            /* 相对定位 */
+            position: relative;
+            width: 300px;
+            height: 450px;
+            margin: 20px;
+            background-color: #758a99;
+            border-radius: 20px;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 弹性布局 */
+            display: flex;
+            /* 元素纵向排列 */
+            flex-direction: column;
+            /* 居中 */
+            align-items: center;
+            color: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            /* 不让其他被挤压 */
+            flex-shrink: 0;
+        }
+
+        .card .photo img {
+            width: 100%;
+            height: 100%;
+            /* 保持原有尺寸比例,裁切长边 */
+            object-fit: cover;
+        }
+
+        /* 默认大图 */
+        .card .photo {
+            /* 绝对定位 */
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0%;
+            overflow: hidden;
+            /* 动画过度 */
+            transition: 0.5s;
+        }
+
+        /* 鼠标移入变小图 */
+        .card:hover .photo {
+            top: 30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        /* 这里加个黑色到透明的渐变背景,可以更好的看清楚名字 */
+        .card .photo::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, 50%, #222);
+        }
+
+        .card h1 {
+            position: absolute;
+            top: 370px;
+            transition: 0.5s;
+        }
+
+        .card:hover h1 {
+            top: 170px;
+        }
+
+        .card h2 {
+            margin-top: 220px;
+            width: 80%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .card p {
+            width: 90%;
+            text-indent: 32px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 30px;
+        }
+
+        .card a {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 32px;
+            border-radius: 8px;
+        }
+
+        .card a:hover {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tuji ul {
+            width: 990px;
+            height: 350px;
+            border: 1px solid;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .tuji ul li {
+            width: 120px;
+            height: 270px;
+            float: left;
+            transition: width 0.5s;
+        }
+
+        .tuji ul li img {
+            width: 490px;
+            height: 350px;
+        }
+
+        .tuji ul:hover li {
+            width: 100px;
+        }
+
+        .tuji ul li:hover {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-5" style="background: #0785D4; ">
+            <a class="navbar-brand px-5" href="#">晨翔动漫网站</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto nav-list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="file:///D:/Bootstrap/Myhtml/html/index.html"><i
+                                class="fa fa-home text-white"></i> &nbsp;首页</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="file:///D:/Bootstrap/Myhtml/html/index2.html"><i
+                                class="fa fa-film text-white"></i> &nbsp;动漫视频</a>
+                    </li>
+                    <li class="nav-item active">
+                        <!-- <a class="nav-link" href="file:///D:/Bootstrap/Myhtml/html/index15.html"><i
+                                class="fa fa-user text-white"></i> &nbsp;用户注册</a> -->
+                        <button type="button" class="btn " style="color: white;" data-toggle="modal"
+                            data-target="#staticBackdrop">
+                            <i class="fa fa-paper-plane text-white"></i> &nbsp;登录注册
+                        </button>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="file:///D:/Bootstrap/Myhtml/html/index16.html"><i
+                                class="fa fa-user text-white"></i> &nbsp;人物简介</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-navicon text-white"></i>
+                            &nbsp; 导航
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="file:///D:/Bootstrap/Myhtml/html/index6.html">电视剧</a>
+                            <a class="dropdown-item" href="file:///D:/Bootstrap/Myhtml/html/index2.html">动漫</a>
+                            <a class="dropdown-item" href="file:///D:/Bootstrap/Myhtml/html/index7.html">电影</a>
+                            <a class="dropdown-item" href="file:///D:/Bootstrap/Myhtml/html/index8.html">综艺</a>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+                <form class="form-inline my-4 my-lg-0">
+                    <input class="form-control " type="search" placeholder="请输入关键词！" aria-label="Search">
+                    <a href="#" class="btn btn-light ml-0">
+                        <i class="fa fa-search text-primary" style="font-size:24px ;"></i>
+                    </a>
+                </form>
+            </div>
+        </nav>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+
+                <div class="modal-content sh" style="width: 700px ; height: 550px;">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="staticBackdropLabel">欢迎来到 你的名字</h5>
+                    
+                </div> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                        right: 50px;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="chr">
+                            <div class="con-box left">
+                                <h2>欢迎来到<span>你的名字</span></h2>
+                                <p>快来注册<span>你的名字</span>账号吧</p>
+                                <img src="D:\Bootstrap\bootstrapdiama\image\背景14.jpeg">
+                                <p>已有账号</p>
+                                <button id="login">去登录</button>
+                            </div>
+                            <div class="con-box right">
+                                <h2>欢迎来到<span>你的名字</span></h2>
+                                <p>快来注册<span>你的名字</span>账号吧</p>
+                                <img src="D:\Bootstrap\bootstrapdiama\image\背景8.jpeg">
+                                <p>没有账号？</p>
+                                <button id="register">去注册</button>
+                            </div>
+                            <div class="form-box">
+                                <!-- 注册    -->
+                                <div class="register-box hiddeb">
+                                    <h1>register</h1>
+                                    <input type="text" placeholder="用户名">
+                                    <input type="email" placeholder="邮箱">
+                                    <input type="password" placeholder="密码">
+                                    <input type="password" placeholder="确认密码">
+                                    <button> 注册</button>
+                                </div>
+                                <!-- 登录 -->
+                                <div class="login-box ">
+                                    <h1>login</h1>
+                                    <input type="text" placeholder="用户名">
+                                    <input type="password" placeholder="密码">
+                                    <button>登录</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr color=" #0785D4" style="margin-top: 50px;height: 10px;margin-bottom: 0;">
+    <div class="container">
+        <h3 style="margin-left: 120px;margin-top:20px;">人物介绍</h3>
+        <div style="margin-left: 100px; margin-top:20px; ">
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\03.webp" />
+                </div>
+                <h1>艾斯</h1>
+                <h2>“火拳”艾斯</h2>
+                <p>波特卡斯·D·艾斯，日本漫画《航海王》及其衍生作品中的角色。萨博与蒙奇·D·路飞的结义兄弟。
+                    烧烧果实的前任能力者，绰号“火拳”，实力强大，悬赏金5亿5000万贝里。</p>
+            </div>
+
+
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\04.webp" />
+                </div>
+                <h1>萨博</h1>
+                <h2>革命军二把手</h2>
+                <p>萨博，日本漫画《海贼王》及其衍生作品中的角色。是蒙奇·D·路飞与波特卡斯·D·艾斯的结义兄弟。外号“炎帝”，革命军参谋总长，同时也是革命军的二把手，悬赏金6亿200万贝里。</p>
+
+            </div>
+
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\02.webp" />
+                </div>
+                <h1>路飞</h1>
+                <h2>草帽小子</h2>
+                <p>蒙奇D路飞，日本漫画《航海王》及其衍生作品中国的角色。是草帽海贼团的船长，橡胶果实能力者，悬赏金30亿贝里。梦想是找到传说中的大秘宝，成为海贼王。</p>
+
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\05.webp" />
+                </div>
+                <h1>漩涡鸣人</h1>
+                <h2>第七代火影</h2>
+                <p>漩涡鸣人，日本漫画《火影忍者》及其衍生作品中的男主角。为实现梦想，和守护伙伴们的羁绊，鸣人不断修炼变强，为忍者世界带来和平，并实现自己成为火影的梦想。</p>
+
+            </div>
+
+
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\06.webp" />
+                </div>
+                <h1>春野樱</h1>
+                <h2>暴力女</h2>
+                <p>春野樱，日本漫画《火影忍者》及其衍生作品中的女主角。新一代医疗忍者，春野樱拜第五代火影纲手为师，学会了纲手开发的百豪之术以及召唤蛞蝓的能力。</p>
+
+            </div>
+
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\07.webp" />
+                </div>
+                <h1>宇智波佐助</h1>
+                <h2>二柱子</h2>
+                <p>宇智波佐助，日本漫画《火影忍者》及其衍生作品中的角色。火之国木叶隐村宇智波一族的天才忍者，六道仙人长子因陀罗的查克拉转世者。</p>
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\08.webp" />
+                </div>
+                <h1>孙悟空</h1>
+                <h2>卡卡罗特</h2>
+                <p>孙悟空，日本漫画《龙珠》及其衍生作品中的男主角。原名：卡卡罗特。来自贝吉塔行星的赛亚人，幼时以“下级战士”之身份送往地球，梦想是不断变强，为追求力量而刻苦修行。
+                </p>
+
+            </div>
+
+
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\09.webp" />
+                </div>
+                <h1>贝吉塔</h1>
+                <h2>赛亚人王子</h2>
+                <p>贝吉塔，日本漫画及改编动画《龙珠》系列中的主要角色。是战斗民族赛亚人的王子，后被孙悟空等人打败。于是决定以超越孙悟空为目标，一直留在地球上努力修行。</p>
+
+            </div>
+
+            <div class="card">
+                <div class="photo">
+                    <img src="D:\Bootstrap\Myhtml\image\10.webp" />
+                </div>
+                <h1>特兰克斯</h1>
+                <h2>迪迦特</h2>
+                <p>特兰克斯，是日本漫画《龙珠》系列的重要角色之一。赛亚人王子贝吉塔和地球科学家布尔玛之子，保卫地球的Z战士之一。</p>
+            </div>
+        </div>
+        <div class="tuji" style="margin-left: 120px;margin-top:20px; float: left;">
+            <h3>精彩图集</h3>
+            <ul>
+                <li><img src="D:\Bootstrap\Myhtml\image\11.webp" alt=""></li>
+                <li><img src="D:\Bootstrap\Myhtml\image\12.webp" alt=""></li>
+                <li><img src="D:\Bootstrap\Myhtml\image\13.webp" alt=""></li>
+                <li><img src="D:\Bootstrap\Myhtml\image\14.webp" alt=""></li>
+                <li><img src="D:\Bootstrap\Myhtml\image\15.webp" alt=""></li>
+                <li><img src="D:\Bootstrap\Myhtml\image\16.webp" alt=""></li>
+            </ul>
+        </div>
+        <div style="margin-top: 30px;margin-left: 150px;float: left; color: white; text-align: center;">
+            <p>
+                本网站提供的最新动漫资源均系收集于各大视频网站，本网站只提供web页面服务，并不提供影片资源存储，也不参与录制、上传
+            </p>
+            <p>
+                若本站收录的链接无意侵犯了贵司版权，请邮箱联系我们，我们会及时处理相关内容，谢谢！邮箱：#hotmail.com
+            </p>
+        </div>
+    </div>
+    <script>
+        var login = document.getElementById('login');
+        var register = document.getElementById('register');
+        var form_box = document.querySelector('.form-box');
+        var register_box = document.querySelector('.register-box');
+        var login_box = document.querySelector('.login-box');
+
+        register.addEventListener('click', function () {
+            form_box.style.transform = 'translateX(80%)';
+            login_box.classList.add('hiddeb');
+            register_box.classList.remove('hiddeb');
+        })
+        login.addEventListener('click', function () {
+            form_box.style.transform = 'translateX(0%)';
+            register_box.classList.add('hiddeb');
+            login_box.classList.remove('hiddeb');
+        })
+    </script>
+</body>
+
+</html>
