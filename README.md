@@ -4,4 +4,4 @@
 
 index -> 首页
 
-order -> 其它页面
+other-> 其它页面
