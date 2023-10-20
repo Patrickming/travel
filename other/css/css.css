@@ -1,0 +1,229 @@
+﻿/*通用类*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+background-image: url('background.jpg');
+opacity: 0.9; /* 设置透明度为0.9 */
+	min-width: 1000px;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+	background: #fff;
+	text-align: justify;
+	color: #010000;
+	position: relative;
+}
+h1, h2, h3 {
+	font-weight: 500;
+}
+img {
+	border: none;
+}
+a {
+	cursor: pointer;
+	color: #333;
+	text-decoration: none;
+	outline: none;
+}
+ul {
+	list-style-type: none;
+}
+em {
+	font-style: normal;
+}
+.lt {
+	float: left;
+}
+.rt {
+	float: right;
+}
+div.clear {
+	font: 0px Arial;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/*wrapin 主体容器宽度*/
+.wrapin {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*公用CSS 开始*/
+
+/*header 开始*/
+header {
+	background: #cf2212;
+	line-height: 60px;
+	padding: 0 15px;
+}
+header .logo {
+	float: left;
+	font-size: 24px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 60px;
+}
+header .nav {
+	float: right;
+}
+header .nav li {
+	width: 120px;
+	text-align: center;
+	font-size: 16px;
+	display: inline-block;
+}
+header .nav li a {
+	color: #fff;
+}
+/* .banner {
+	display: center;
+} */
+/* .banner img {
+	display: center;
+	width: 50%;
+} */
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; 
+
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 20px;
+  
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+.box .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.box img {
+  width: 250px;
+  height: 250px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  border-radius: 50%;
+
+  transition: transform 1s;
+}
+
+.box img:hover{
+	transform: rotateY(180deg);
+}
+
+.box p {
+  text-align: center;
+  font-size: 20px;
+
+  color: black;
+  transition: color 1ms;
+}
+
+.box p:hover{
+	color: orange;
+}
+
+  
+.in_com {
+	background: #f4f8ff;
+	padding: 15px;
+	display: block;
+}
+.con_top .pic {
+	width: 300px;
+	float: left;
+}
+.con_top .pic img {
+	width: 100%;
+}
+.con_top .text {
+	float: right;
+	width: 650px;
+	line-height: 28px;
+	color: #333;
+}
+.title {
+	background: #598bd2;
+	line-height: 40px;
+	padding: 0 15px;
+	margin: 20px 0;
+}
+.title h2 {
+	font-size: 20px;
+	color: #fff;
+}
+.text_a {
+	text-indent: 2em;
+	line-height: 28px;
+	color: #333;
+}
+.text_a img {
+	margin-left: 15px;
+}
+footer {
+	background: #cf2212;
+	line-height: 60px;
+	padding: 0 15px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+.pic_con {
+	margin: 0 -15px;
+}
+.pic_con li {
+	float: left;
+	width: 33.333%;
+	box-sizing: border-box;
+	padding: 15px;
+}
+.pic_con li img {
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+}
+.renwu_box li {
+	position: relative;
+	height: 260px;
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 15px;
+}
+.renwu_box li .pic {
+	width: 260px;
+	height: 260px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.renwu_box li .pic img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.renwu_box li .text {
+	margin-left: 280px;
+	font-size: 16px;
+	line-height: 28px;
+	color: #333;
+}
