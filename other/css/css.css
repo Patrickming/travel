@@ -177,7 +177,7 @@ header .nav li a {
 	color: #fff;
 }
 
-/* 容器内包含若干文字+图片，图片显示在最左侧*/
+/* 容器内包含若干文字+图片，图片显示在最右侧*/
 .culture-container {
 	display: flex;
 	flex-direction: column;
@@ -221,6 +221,104 @@ footer {
 	color: #fff;
 }
 
+/* 风景名胜滚动图 */
+/* 1. 样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* 外层盒子样式,左右箭头和小圆点都要采用绝对定位，所以其父盒子要采用相对定位*/
+.banners {
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 600px;
+    
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	border-radius: 20px;
+
+	background-color:rgba(255,255,255,0.5);
+
+}
+/*滚动区 包裹所有图片的盒子 宽度要足够宽可以放下所有的图片*/
+.images {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 700%;
+}
+/* 对图片使用浮动 使其排列在一行*/
+.images li{
+    float: left;
+}
+/* 图片大小会撑大盒子,设置图片大小 */
+.banners img {
+    width: 980px;
+    height: 500px;
+
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*左右箭头相同样式*/
+.prev,
+.next {
+    display: none;
+    position: absolute;  
+    /* 绝对定位的盒子垂直居中 */
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    background: rgba(0,0,0, .3);
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none; 
+}
+/*左箭头靠左定位*/
+.prev {
+    left: 0;
+     /* 设置圆角 */
+     border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+/*右箭头靠右定位*/
+.next {
+    right: 0;
+    /* 设置圆角 */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+/* 小圆点外层盒子的样式 */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -35px;
+    height: 13px;
+    background:rgba(255,255,255, .3);
+    border-radius:7px;
+}
+/* 小圆点样式*/
+.dots li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+/* 小圆点被点击的样式 */
+.dots .active {
+    background-color: #ff5000;
+}
+
 
 
 .pic_con {
@@ -262,3 +360,41 @@ footer {
 	line-height: 28px;
 	color: #333;
 }
+
+/* 容器内包含若干文字+图片，图片显示在最右侧*/
+.attration-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+
+	background-color: rgba(154, 226, 248, 0.8);
+  	border-radius: 20px;
+  }
+  
+  .attration {
+	display: flex;
+	align-items: center;
+	/* justify-content: space-between; */
+	width: 80%;
+	padding: 10px;
+	margin: 20px;
+
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 15px;
+  }
+  
+  .attration-text {
+	margin-left: 40px;
+	display: flex;
+	flex-direction: column;
+  }
+
+  .attraction-text p{
+	text-indent: 2em;
+  }
+  
+  .attraction-image{
+	margin-left: 20px;
+  }
