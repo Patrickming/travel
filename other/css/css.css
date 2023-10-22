@@ -3,13 +3,137 @@
 	margin: 0;
 	padding: 0;
 }
+
+/* 捏导航栏 */
+body {
+	font-size: 100%;
+	line-height: 160%;
+	word-break: break-all;
+	word-wrap: break-word;
+	-webkit-text-size-adjust: none;
+
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  	font-weight: 400;
+  	color: #212529;
+  	text-align: left;
+  }
+
+  #menu {
+	width: 100%;
+	height: 80px;
+	padding: 10px 30px 10px;
+	box-sizing: border-box;
+	box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+	position: fixed;
+	top: 0;
+	background:wheat;
+	z-index: 99;
+	margin: 0;
+	display: block;
+  }
+
+  #menu .head {
+	display: flex;
+
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	
+  }
+
+  #menu .title-nav{
+	width: 200px;
+	line-height: 60px;
+	font-weight: 600;
+	font-size: 26px;
+
+	background: none;
+  }
+
+
+
+  #menu ul {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 auto;
+ 	padding: 0;
+  	list-style: none;
+
+	border: 0px;
+  }
+
+  #menu li {
+	list-style: none;
+	width: 120px;
+	text-align: center;
+	margin: 0;
+  	padding: 0;
+	display: list-item;
+	border: 0px;
+  }
+
+  #menu a {
+	display: block;
+	line-height: 60px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+
+	background-color: transparent;
+	outline: none;
+  }
+
+
+  #menu ul.sub-menus {
+	height: auto;
+	overflow: hidden;
+	width: 120px;
+	background: #a99999;
+	position: absolute;
+	z-index: 99;
+	display: none;
+  }
+
+  #menu ul.sub-menus a {
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 40px;
+  }
+
+  #menu a.dropdown-arrow::after {
+	content: "\25BE";
+  
+	margin-left: 5px;
+  
+	font-size: 30px;
+  
+	position: absolute;
+  
+  }
+
+  #menu li a:hover {
+    border-bottom: 2px solid rgb(248, 188, 49);
+  }
+
+
+  #menu li:hover ul.sub-menus {
+    display: block;
+  }
+  
+  #menu ul.sub-menus a:hover {
+    background: #f2f2f2;
+    color: #444444;
+    border-bottom: none;
+  }
+
 body {
 	background-image: url('background.jpg');
-	opacity: 0.9; /* 设置透明度为0.9 */
 	min-width: 1000px;
 	margin: 0 auto;
 	font-size: 14px;
-	font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+	/* font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif; */
 	background: #fff;
 	text-align: justify;
 	color: #010000;
@@ -63,38 +187,7 @@ div.clear {
 }
 /*公用CSS 开始*/
 
-/*header 开始*/
-header {
-	background: #cf2212;
-	line-height: 60px;
-	padding: 0 15px;
-}
-header .logo {
-	float: left;
-	font-size: 24px;
-	color: #fff;
-	font-weight: bold;
-	line-height: 60px;
-}
-header .nav {
-	float: right;
-}
-header .nav li {
-	width: 120px;
-	text-align: center;
-	font-size: 16px;
-	display: inline-block;
-}
-header .nav li a {
-	color: #fff;
-}
-/* .banner {
-	display: center;
-} */
-/* .banner img {
-	display: center;
-	width: 50%;
-} */
+
 
 .select-box {
   display: flex;
@@ -105,7 +198,7 @@ header .nav li a {
   background-color: rgba(255,255,255,0.5);
   border-radius: 20px;
   
-  margin-top: 50px;
+  margin-top: 120px;
   margin-bottom: 50px;
 
 }
@@ -149,7 +242,7 @@ header .nav li a {
 
   
 .in_com {
-	background: #f4f8ff;
+	background: rgba(255,255,255,0.7);
 	padding: 15px;
 	display: block;
 }
@@ -219,12 +312,12 @@ header .nav li a {
 
 
 footer {
-	background: #cf2212;
+	background: wheat;
 	line-height: 60px;
 	padding: 0 15px;
 	text-align: center;
 	font-size: 14px;
-	color: #fff;
+	color: #000;
 }
 
 /* 风景名胜滚动图 */
