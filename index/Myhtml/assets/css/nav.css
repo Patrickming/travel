@@ -1,0 +1,90 @@
+#menu {
+  width: 100%;
+  height: 80px;
+  padding: 10px 30px 10px;
+  box-sizing: border-box;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  position: fixed;
+  top: 0;
+  background: #f9f9f9;
+  z-index: 99;
+}
+#menu .head {
+  display: flex;
+}
+#menu .title {
+  width: 200px;
+  line-height: 60px;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+#menu ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#menu li {
+  list-style: none;
+  width: 120px;
+  text-align: center;
+}
+
+#menu a {
+  display: block;
+  line-height: 60px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+  font-size: 30px;
+  position: absolute;
+}
+
+#menu li a:hover {
+  border-bottom: 2px solid rgb(248, 188, 49);
+}
+
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  width: 120px;
+  background: #a99999;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+
+#menu ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+
+#menu ul.sub-menus a {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+#menu li:hover ul.sub-menus {
+  display: block;
+}
+
+#menu ul.sub-menus a:hover {
+  background: #f2f2f2;
+  color: #444444;
+  border-bottom: none;
+}
