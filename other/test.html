@@ -5,34 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="test.css">
-    <script src="test.js"></script>
-    <script src="animate.js"></script>
+
 </head>
 <body>
-    <div class="banners">
-        <ul class="images">
-             <!-- 核心滚动区 -->
+    <nav id="menu">
+        <div class="w1200 head">
+          <div class="title">广元</div>
+          <!-- 导航栏 -->
+          <ul>
+            <li class="nav-item active">
+              <a class="nav-link" href="test.html"></i>&nbsp;首页</a>
+            </li>
             <li>
-                <a href="#"><img src="images/temp.jpg" alt=""></a>
-            </li>           
+              <a class="dropdown-arrow" href="javascript:;">历史文化</a>
+              <ul class="sub-menus">
+                <li><a href="test.html">特色节目</a></li>
+                <li><a href="test.html">文化遗产</a></li>
+              </ul>
+            </li>
             <li>
-                <a href="#"><img src="images/temp.jpg" alt=""></a>
-            </li>       
+              <a class="dropdown-arrow" href="javascript:;">名优特产</a>
+              <ul class="sub-menus">
+                <li><a href="javascript:;">特产1</a></li>
+                <li><a href="javascript:;">特产2</a></li>
+              </ul>
+            </li>
             <li>
-                <a href="#"><img src="images/temp.jpg" alt=""></a>
-            </li>       
+              <a class="dropdown-arrow" href="javascript:;">风景名胜</a>
+              <ul class="sub-menus">
+                <li><a href="javascript:;">风景1</a></li>
+                <li><a href="javascript:;">风景2</a></li>
+              </ul>
+            </li>
+  
             <li>
-                <a href="#"><img src="images/temp.jpg" alt=""></a>
-            </li>                 
-        </ul> 
-        <!-- 左箭头 -->
-        <a href="javascript:;" class="prev"> &lt;</a>
-        <!-- 右箭头 -->
-        <a href="javascript:;" class="next"> &gt;</a>
-        <!-- 小圆点 -->
-        <ul class="dots">
-            <!-- li 可用js动态生成-->
-        </ul>
-    </div>
+              <a href="javascript:;">地理位置</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 </body>
 </html>
