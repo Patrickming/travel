@@ -208,6 +208,12 @@ header .nav li a {
   
   .culture-image {
 	margin-left: 40px;
+
+	transition: all 0.2s;
+  }
+
+  .culture-image:hover{
+	transform: scale(1.1);
   }
   
 
@@ -335,34 +341,9 @@ li {
 	height: 240px;
 	object-fit: cover;
 }
-.renwu_box li {
-	position: relative;
-	height: 260px;
-	padding-bottom: 15px;
-	border-bottom: 1px dashed #ccc;
-	margin-bottom: 15px;
-}
-.renwu_box li .pic {
-	width: 260px;
-	height: 260px;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-.renwu_box li .pic img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-.renwu_box li .text {
-	margin-left: 280px;
-	font-size: 16px;
-	line-height: 28px;
-	color: #333;
-}
 
-/* 容器内包含若干文字+图片，图片显示在最右侧*/
-.attration-container {
+/* 容器内包含若干文字+图片，图片显示在最左侧*/
+.attraction-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -372,7 +353,7 @@ li {
   	border-radius: 20px;
   }
   
-  .attration {
+  .attraction {
 	display: flex;
 	align-items: center;
 	/* justify-content: space-between; */
@@ -385,7 +366,7 @@ li {
 	margin-bottom: 15px;
   }
   
-  .attration-text {
+  .attraction-text {
 	margin-left: 40px;
 	display: flex;
 	flex-direction: column;
@@ -397,4 +378,10 @@ li {
   
   .attraction-image{
 	margin-left: 20px;
+
+	transition: all 0.2s;
+  }
+
+  .attraction-image:hover{
+	transform: scale(1.1);
   }
