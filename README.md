@@ -2,7 +2,7 @@
 
 文旅
 
-index -> 首页
+index\Myhtml\html\index1.html -> 首页
 
 other -> 其它界面 灵活放置
 
