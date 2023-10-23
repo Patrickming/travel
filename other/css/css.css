@@ -428,11 +428,17 @@ li {
 	width: 33.333%;
 	box-sizing: border-box;
 	padding: 15px;
+
+	transition: all 0.2s;
 }
 .pic_con li img {
 	width: 100%;
 	height: 240px;
 	object-fit: cover;
+}
+
+.pic_con li:hover{
+	transform: scale(1.2);
 }
 
 /* 容器内包含若干文字+图片，图片显示在最左侧*/
