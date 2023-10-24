@@ -5,6 +5,8 @@
 travel_:
 1. assets -> 网页所用css、images、js...资源
 2. html -> 网页
+   1. index -> 首页
+   2. ..
    
 other还未并入
 
