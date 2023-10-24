@@ -40,7 +40,7 @@
       width: 280px;
       height: 370px;
       margin: 20px;
-      background-color: #758a99;
+      /* background-image: url('../assets/images/01.jpg'); */
       border-radius: 20px;
       /* 溢出隐藏 */
       overflow: hidden;
@@ -91,13 +91,14 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, transparent, 50%, #222);
+      background: linear-gradient(to bottom, transparent, 80%, #222);
     }
 
     .card h1 {
       position: absolute;
       top: 370px;
       transition: 0.5s;
+      font-family:"华文行楷";
     }
 
     .card:hover h1 {
@@ -112,6 +113,7 @@
       text-align: center;
       margin-bottom: 20px;
       padding-bottom: 20px;
+      font-family:"华文新魏";
     }
 
     .card p {
@@ -120,6 +122,8 @@
       font-size: 16px;
       margin-bottom: 15px;
       line-height: 30px;
+      transition: 0.5s;
+      font-family:"华文楷体";
     }
 
     .card a {
@@ -134,6 +138,19 @@
     .card a:hover {
       color: white;
       background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    #card1 {
+      background-image: url('../assets/images/01.jpg');
+    }
+    #card2 {
+      background-image: url('../assets/images/02.jpg');
+    }
+    #card3 {
+      background-image: url('../assets/images/03.jpg');
+    }    
+    #card4 {
+      background-image: url('../assets/images/04.jpg');
     }
   </style>
 </head>
@@ -226,19 +243,20 @@
       <h1>广元概况</h1>
     </div>
     <div class="w1200 info">
+      <p>美丽富饶的土地，生生不息的文化，孕肓了泸州人不屈不挠、奋发拼搏的精神品格。宋、元之际，蒙古军 入蜀，泸州筑城于合江神臂崖坚持抗战35年之久，“天生的重庆，铁打的泸州”由此而得名。中国工农红军四
+        渡赤水遗址、泸州起义指挥部、朱德纪念馆以及朱总司令亲笔题写的“救民水火”、“护国岩”等革命遗址已 成为爱国主义教育基地。
+        气候温和，五业兴旺。泸州北部为准南亚热带季风湿润气候，南部山区气候有中亚热带、北亚热带、南温 带和北温带气候之分，具有山区立体气候的特点。这里土地肥沃，物产富庶。具有春荣夏艳秋实冬秀的江南特
+        色。得天独厚的自然条件为农、林、牧、副、渔业提供良好的条件，是四川省的粮、猪、林、烟、果、中药材 等产品的重要生产基地。
+      </p>
     </div class="w1200 info">
-    <p>美丽富饶的土地，生生不息的文化，孕肓了泸州人不屈不挠、奋发拼搏的精神品格。宋、元之际，蒙古军 入蜀，泸州筑城于合江神臂崖坚持抗战35年之久，“天生的重庆，铁打的泸州”由此而得名。中国工农红军四
-      渡赤水遗址、泸州起义指挥部、朱德纪念馆以及朱总司令亲笔题写的“救民水火”、“护国岩”等革命遗址已 成为爱国主义教育基地。
-      气候温和，五业兴旺。泸州北部为准南亚热带季风湿润气候，南部山区气候有中亚热带、北亚热带、南温 带和北温带气候之分，具有山区立体气候的特点。这里土地肥沃，物产富庶。具有春荣夏艳秋实冬秀的江南特
-      色。得天独厚的自然条件为农、林、牧、副、渔业提供良好的条件，是四川省的粮、猪、林、烟、果、中药材 等产品的重要生产基地。
-    </p>
+    
   </div>
   <!--概况介绍完-->
   <br><br><br><br><br>
   <ul class="blocks w1200">
     <li>
       <a href="test.html">
-        <div class="card">
+        <div class="card" id="card1">
           <div class="photo">
             <img src="../assets/images/01.jpg" />
           </div>
@@ -250,21 +268,9 @@
     </li>
     <li>
       <a href="test.html">
-        <div class="card">
+        <div class="card" id="card2">
           <div class="photo">
             <img src="../assets/images/02.jpg" />
-          </div>
-          <h1>风景名胜</h1>
-          <h2>特色节目&文化遗产</h2>
-          <p>相关介绍</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="test.html">
-        <div class="card">
-          <div class="photo">
-            <img src="../assets/images/03.jpg" />
           </div>
           <h1>名优特产</h1>
           <h2>特色节目&文化遗产</h2>
@@ -274,7 +280,19 @@
     </li>
     <li>
       <a href="test.html">
-        <div class="card">
+        <div class="card" id="card3">
+          <div class="photo">
+            <img src="../assets/images/03.jpg" />
+          </div>
+          <h1>风景名胜</h1>
+          <h2>特色节目&文化遗产</h2>
+          <p>相关介绍</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="test.html">
+        <div class="card" id="card4">
           <div class="photo">
             <img src="../assets/images/04.jpg" />
           </div>
@@ -286,10 +304,12 @@
     </li>
   </ul>
 
+  <br><br><br><br>
   <footer>
-    <div class="w1200 main">
-      <div class="foot-title">文旅名称</div>
-      <p class="copyright">版权所有</p>
+    <div id="bottom">
+      Copyright © 2019 111111111. All rights reserved.&nbsp;&nbsp;
+      <a href="test.html">联系我们</a>
+      <a href="#top">回到顶部</a>
     </div>
   </footer>
   <script src="../assets/js/swiper.min.js"></script>
