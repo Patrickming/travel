@@ -2,9 +2,11 @@
 
 文旅
 
-index\Myhtml\html\index1.html -> 首页
-
-other -> 其它界面 灵活放置
+travel_:
+1. assets -> 网页所用css、images、js...资源
+2. html -> 网页
+   
+other还未并入
 
 
 
