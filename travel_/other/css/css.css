@@ -45,7 +45,9 @@ body {
 	width: 200px;
 	line-height: 60px;
 	font-weight: 600;
-	font-size: 26px;
+
+	font-size: 28px;
+	font-family: "Microsoft YaHei";
 
 	background: none;
   }
@@ -79,7 +81,9 @@ body {
 	padding: 0 14px;
 	text-decoration: none;
 	color: #000;
-	font-size: 16px;
+
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
 
 	background-color: transparent;
 	outline: none;
@@ -129,12 +133,14 @@ body {
   }
 
 body {
-	background-image: url('background.jpg');
+	background-image: url("bg.jpg");
 	min-width: 1000px;
 	margin: 0 auto;
-	font-size: 14px;
+	font-size: 24px;
 	/* font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif; */
-	background: #fff;
+	font-family: "华文楷体";
+	font-size: 24px;;
+	/* background: #fff; */
 	text-align: justify;
 	color: #010000;
 	position: relative;
@@ -142,6 +148,8 @@ body {
 	background-repeat: no-repeat;/* 设置背景固定 */
   	background-size: cover;
   	background-attachment: fixed;
+
+	caret-color: transparent;/* 设定光标隐藏 */
 }
 h1, h2, h3 {
 	font-weight: 500;
@@ -195,7 +203,7 @@ div.clear {
   align-items: center;
   flex-direction: row; 
 
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(245,222,179, 0.7);
   border-radius: 20px;
   
   margin-top: 120px;
@@ -260,7 +268,7 @@ div.clear {
 	color: #333;
 }
 .title {
-	background: #598bd2;
+	background: tan;
 	line-height: 40px;
 	padding: 0 15px;
 	margin: 20px 0;
@@ -277,7 +285,7 @@ div.clear {
 	align-items: center;
 	margin: 20px;
 
-	background-color: rgba(154, 226, 248, 0.8);
+	background-color: wheat;
   	border-radius: 20px;
   }
   
@@ -301,12 +309,16 @@ div.clear {
   
   .culture-image {
 	margin-left: 40px;
+	flex-direction: row;
+  }
 
+  .culture-image img{
+	margin-top: 20px;
 	transition: all 0.2s;
   }
 
-  .culture-image:hover{
-	transform: scale(1.1);
+  .culture-image img:hover{
+	transform: scale(1.5);
   }
   
 
@@ -337,7 +349,7 @@ li {
     width: 1000px;
     height: 600px;
     
-	margin-top: 50px;
+	margin-top: 120px;
 	margin-bottom: 50px;
 
 	border-radius: 20px;
@@ -456,7 +468,6 @@ li {
 	display: flex;
 	align-items: center;
 	/* justify-content: space-between; */
-	width: 80%;
 	padding: 10px;
 	margin: 20px;
 
@@ -477,10 +488,15 @@ li {
   
   .attraction-image{
 	margin-left: 20px;
+	flex-direction: row;
+  }
+
+  .attraction-image img{
+	margin-top: 20px;
 
 	transition: all 0.2s;
   }
 
-  .attraction-image:hover{
-	transform: scale(1.1);
+  .attraction-image img:hover{
+	transform: scale(1.5);
   }
