@@ -285,7 +285,7 @@ div.clear {
 	align-items: center;
 	margin: 20px;
 
-	background-color: wheat;
+	background-color: rgba(245,222,179, 0.7);
   	border-radius: 20px;
   }
   
