@@ -187,6 +187,11 @@ div.clear {
 	display: block;
 	clear: both;
 }
+
+.head-placeholder{
+    margin-top: 100px;
+}
+
 /*wrapin 主体容器宽度*/
 .wrapin {
 	width: 1000px;
@@ -433,9 +438,26 @@ li {
 
 
 .pic_con {
-	margin: 0 -15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+
+	background-color: rgba(154, 226, 248, 0.8);
+  	border-radius: 20px;
 }
-.pic_con li {
+.pictures{
+	padding: 10px;
+	margin: 20px;
+
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 15px;
+}
+.pictures-title{
+	background-color: rgb(245,222,179);
+}
+.pictures li {
 	float: left;
 	width: 33.333%;
 	box-sizing: border-box;
@@ -443,13 +465,13 @@ li {
 
 	transition: all 0.2s;
 }
-.pic_con li img {
+.pictures li img {
 	width: 100%;
 	height: 240px;
 	object-fit: cover;
 }
 
-.pic_con li:hover{
+.pictures li:hover{
 	transform: scale(1.2);
 }
 
