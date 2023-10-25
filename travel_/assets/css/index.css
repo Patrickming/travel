@@ -1,33 +1,46 @@
 .flexRow {
   display: flex;
 }
+
 .flexCol {
   display: flex;
   flex-direction: column;
 }
-.container {
+
+.banner-container {
   margin-top: 80px;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
-.swiper-container {
-}
 .swiper-slide {
   position: relative;
-  height: 600px;
+  height: 650px;
 }
+
 .slide-inner {
   height: 100%;
   transform: translate3d(0px, 0px, 0px);
+  background-size: cover;
 }
+
 .inner1 {
-  background-image: url("../images/1.jpg");
+  background-image: url("../images/banner2.png");
 }
+
 .inner2 {
-  background-image: url("../images/2.jpg");
+  background-image: url("../images/banner1.png");
 }
+
 .inner3 {
-  background-image: url("../images/3.jpg");
+  background-image: url("../images/banner3.png");
+}
+
+.inner4 {
+  background-image: url("../images/banner4.png");
+}
+
+.inner1 .desc {
+  top: 65%;
 }
 
 .desc {
@@ -36,51 +49,51 @@
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
+  width: 400px;
 }
+
 .desc p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
-.info {
-  margin: 50px auto;
-}
-.info p {
-  margin-bottom: 30px;
-  line-height: 30px;
-  padding: 0 30px;
-}
+
 
 .blocks {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
+
 .blocks li {
   width: 270px;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.blocks li:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+
+.blocks li:hover {}
+
 .blocks li a {
   font-size: 24px;
   font-family: "Courier New", Courier, monospace;
 }
+
 footer {
-  background: #f9f9f9;
+  background: wheat;
 }
+
 footer .main {
   height: 80px;
   margin-top: 60px;
   text-align: center;
   position: relative;
 }
+
 .copyright {
   line-height: 80px;
 }
+
 .foot-title {
   position: absolute;
   left: 0;
@@ -89,53 +102,271 @@ footer .main {
 }
 
 
-.js h1{
-display:inline-block;
-font-family:"华文楷体";
-font-size:48px;
-color:#3A79CD;
-}
-.js .h{
-width:800px;
-height:60px;
-margin:30px auto;
-text-align:center;
-border-bottom:5px solid #3A79CD;
+.js h1 {
+	display:inline-block;
+	font-family:"华文新魏";
+	font-size:48px;
+	color:rgba(116, 97, 97, 0.845);
 }
 
-p{
-margin:20px 20px;
-text-indent:2em;
-line-height:40px;
-font-family:"华文楷体";
-font-size:24px;
+.js .h {
+	width:800px;
+	height:60px;
+	margin:30px auto;
+	text-align:center;
+	border-bottom:5px solid black;
+}
+
+.activity {
+  margin: 50px auto 80px;
+}
+
+.activity h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family:"华文楷体";
+}
+.activity p {
+  margin-bottom: 50px;
+  font-family:"宋体";
+}
+.article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.article img {
+  width: 300px;
+}
+
+.article .detail {
+  padding: 0 20px;
+  flex: 1;
+}
+
+.article .detail p {
+  margin: 0;
+}
+
+p {
+  margin: 20px 20px;
+  text-indent: 2em;
+  line-height: 40px;
+  font-family: "华文楷体";
+  font-size: 18px;
 }
 
 /* 底部 */
-#bottom a{
-  color: white;
+#bottom a {
+  color: black;
   transition: 0.3s;
   text-decoration: none;
-  background-color: wheat;
+  /* background-color: #fff; */
 }
-#bottom a:hover{
-  color: black;
-  border-bottom: 4px solid yellow;
+
+#bottom a:hover {
+  border-bottom: 2px solid #97d3f7;
   transition: 0.3s;
+  color: #97d3f7;
 }
 
-#bottom{
+#bottom {
   width: 100%;
-  height: 70px;
-  background-color: wheat;
+  /* height: 70px; */
+  /* background-color: #a9afb4; */
   text-align: center;
-  line-height: 70px;
-  font-family:"华文楷体";
+  /* line-height: 70px; */
+  font-family: "华文楷体";
+  padding: 20px 0;
 }
 
+#bottom p {
+  margin-bottom: 0;
+}
+
+#bottom p a {
+  margin: 0 10px;
+}
+
+.part {
+  position: relative;
+}
+
+.part img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+}
 
 /* 不同card模块的背景 */
 .card #card1 {
-  background-image: url('../assets/images/01.jpg');
+  background-image: url('../images/01.jpg');
 
-} 
+}
+
+body {
+  width: 100%;
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  /* background: #fbfbfb; */
+}
+
+/* 模块组件card */
+.card {
+  float: left;
+  /* 相对定位 */
+  position: relative;
+  width: 280px;
+  height: 370px;
+  margin: 20px;
+  /* background-image: url('../assets/images/01.jpg'); */
+  border-radius: 20px;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 弹性布局 */
+  display: flex;
+  /* 元素纵向排列 */
+  flex-direction: column;
+  /* 居中 */
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  /* 不让其他被挤压 */
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.card .photo img {
+  width: 100%;
+  height: 100%;
+  /* 保持原有尺寸比例,裁切长边 */
+  object-fit: cover;
+}
+
+/* 默认大图 */
+.card .photo {
+  /* 绝对定位 */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  overflow: hidden;
+  /* 动画过度 */
+  transition: 0.5s;
+}
+
+/* 鼠标移入变小图 */
+.card:hover .photo {
+  top: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* 这里加个黑色到透明的渐变背景,可以更好的看清楚名字 */
+.card .photo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, 80%, #222);
+}
+
+.card h1 {
+  position: absolute;
+  top: 370px;
+  transition: 0.5s;
+  font-family: "华文行楷";
+}
+
+.card:hover h1 {
+  top: 170px;
+}
+
+.card h2 {
+  margin-top: 220px;
+  width: 80%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-family: "华文新魏";
+}
+
+.card p {
+  width: 90%;
+  text-indent: 32px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 30px;
+  transition: 0.5s;
+  font-family: "华文楷体";
+}
+
+.card a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 32px;
+  border-radius: 8px;
+}
+
+.card a:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#card1 {
+  background-image: url('../images/01.jpg');
+}
+
+#card2 {
+  background-image: url('../images/02.jpg');
+  background-size: cover;
+}
+
+#card3 {
+  background-image: url('../images/03.jpg');
+}
+
+#card4 {
+  background-image: url('../images/04.jpg');
+}
+
+/* 首页图片 */
+.article .indexImage{
+	float:left;
+	width:400px;
+	margin-right:25px;
+	border-radius:8px;
+}
+
+.article .indexImage img{
+	width:100%;
+	display:block;
+	border-radius:8px;	
+}
+
+.article .indexImage img{
+	transition:all 0.4s;
+	border-radius:8px;
+}
+
+.article .indexImage img:hover{
+	transform:scale(1.1);
+	border-radius:8px;
+}
+
+.article .indexImage div{
+	overflow:hidden;
+	border-radius:8px;
+}
