@@ -528,3 +528,8 @@ li {
   .attraction-image img:hover{
 	transform: scale(1.5);
   }
+
+  /* 导航栏缓慢跳转 */
+html {
+	scroll-behavior: smooth;
+  }

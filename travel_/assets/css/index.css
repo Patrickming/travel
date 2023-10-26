@@ -218,6 +218,7 @@ body {
   background-position: center bottom;
   background-size: cover;
   /* background: #fbfbfb; */
+  caret-color: transparent;/* 设定光标隐藏 */
 }
 
 /* 模块组件card */
