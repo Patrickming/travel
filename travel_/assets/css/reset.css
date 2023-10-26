@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 body,
 h1,
 h2,
@@ -17,20 +18,28 @@ ul,
 ol,
 input,
 button {
-  margin: 0; /*去掉自带外间距*/
-  padding: 0; /*去掉自带内填充*/
+  margin: 0;
+  /*去掉自带外间距*/
+  padding: 0;
+  /*去掉自带内填充*/
 }
+
 em,
 i {
-  font-style: normal; /*斜体扶正*/
+  font-style: normal;
+  /*斜体扶正*/
 }
+
 li {
-  list-style: none; /*去掉默认列表符*/
+  list-style: none;
+  /*去掉默认列表符*/
 }
 
 a {
-  outline: none; /*去掉描边*/
-  text-decoration: none; /*去掉自带下划线*/
+  outline: none;
+  /*去掉描边*/
+  text-decoration: none;
+  /*去掉自带下划线*/
 }
 
 /*  清除a标签下划线 */
@@ -38,30 +47,41 @@ a,
 a:visited {
   text-decoration: none;
 }
+
 a:focus,
 a:active,
 a:hover {
   outline: none;
+  text-decoration: none !important;
 }
 
 img {
-  border: none; /*去掉ie浏览器图片外面的边框*/
-  vertical-align: top; /*图片对齐方式*/
+  border: none;
+  /*去掉ie浏览器图片外面的边框*/
+  vertical-align: top;
+  /*图片对齐方式*/
 }
+
 table {
-  border-collapse: collapse; /*去掉表格自带间隙*/
+  border-collapse: collapse;
+  /*去掉表格自带间隙*/
   border-spacing: 0;
 }
+
 input,
 button {
   outline: none;
   border: none;
-  background-color: transparent; /*背景色透明*/
+  background-color: transparent;
+  /*背景色透明*/
 }
+
 textarea {
   outline: none;
-  resize: none; /*禁止调整文本域尺寸*/
-  overflow: auto; /*在浏览器默认状态下没有滚动条*/
+  resize: none;
+  /*禁止调整文本域尺寸*/
+  overflow: auto;
+  /*在浏览器默认状态下没有滚动条*/
 }
 
 body {
@@ -71,16 +91,23 @@ body {
 
 /*public style*/
 .clearfix {
-  zoom: 1; /*IE浏览器清浮动*/
+  zoom: 1;
+  /*IE浏览器清浮动*/
 }
+
 .clearfix:after {
-  content: ""; /*添加一个空内容*/
-  display: block; /*转块*/
-  clear: both; /*清浮动*/
+  content: "";
+  /*添加一个空内容*/
+  display: block;
+  /*转块*/
+  clear: both;
+  /*清浮动*/
 }
+
 .fl {
   float: left;
 }
+
 .fr {
   float: right;
 }
@@ -88,10 +115,12 @@ body {
 .w-full {
   width: 100%;
 }
+
 .white {
   background: #fff;
 }
+
 .w1200 {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }

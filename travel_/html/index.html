@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../assets/css/nav.css" />
   <link rel="stylesheet" href="../assets/css/index.css" />
   <!-- 组件后引入 -->
-  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.css" />
   <!-- <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css"> -->
   <!-- <link rel="stylesheet" href="../css/style.css"> -->
   <!-- <link rel="stylesheet" href="../css/wangye5.css"> -->
@@ -31,134 +31,16 @@
       background-attachment: fixed;
       margin: auto;
     }
-
-    /* 模块组件card */
-    .card {
-      float: left;
-      /* 相对定位 */
-      position: relative;
-      width: 280px;
-      height: 370px;
-      margin: 20px;
-      /* background-image: url('../assets/images/01.jpg'); */
-      border-radius: 20px;
-      /* 溢出隐藏 */
-      overflow: hidden;
-      /* 弹性布局 */
-      display: flex;
-      /* 元素纵向排列 */
-      flex-direction: column;
-      /* 居中 */
-      align-items: center;
-      color: #fff;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-      /* 不让其他被挤压 */
-      flex-shrink: 0;
-    }
-
-    .card .photo img {
-      width: 100%;
-      height: 100%;
-      /* 保持原有尺寸比例,裁切长边 */
-      object-fit: cover;
-    }
-
-    /* 默认大图 */
-    .card .photo {
-      /* 绝对定位 */
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 0%;
-      overflow: hidden;
-      /* 动画过度 */
-      transition: 0.5s;
-    }
-
-    /* 鼠标移入变小图 */
-    .card:hover .photo {
-      top: 30px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    }
-
-    /* 这里加个黑色到透明的渐变背景,可以更好的看清楚名字 */
-    .card .photo::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, transparent, 80%, #222);
-    }
-
-    .card h1 {
-      position: absolute;
-      top: 370px;
-      transition: 0.5s;
-      font-family:"华文行楷";
-    }
-
-    .card:hover h1 {
-      top: 170px;
-    }
-
-    .card h2 {
-      margin-top: 220px;
-      width: 80%;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      font-size: 20px;
-      text-align: center;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      font-family:"华文新魏";
-    }
-
-    .card p {
-      width: 90%;
-      text-indent: 32px;
-      font-size: 16px;
-      margin-bottom: 15px;
-      line-height: 30px;
-      transition: 0.5s;
-      font-family:"华文楷体";
-    }
-
-    .card a {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      padding: 8px 32px;
-      border-radius: 8px;
-    }
-
-    .card a:hover {
-      color: white;
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    #card1 {
-      background-image: url('../assets/images/01.jpg');
-    }
-    #card2 {
-      background-image: url('../assets/images/02.jpg');
-    }
-    #card3 {
-      background-image: url('../assets/images/03.jpg');
-    }    
-    #card4 {
-      background-image: url('../assets/images/04.jpg');
-    }
   </style>
 </head>
 
 <body>
   <nav id="menu">
     <div class="w1200 head">
-      <div class="title">广元</div>
+      <div class="title">
+        <img src="../assets/images/logo.png" class="logo" />
+        广元文旅
+      </div>
       <!-- 导航栏 -->
       <ul>
         <li class="nav-item active">
@@ -195,22 +77,20 @@
         </li>
 
         <li>
-          <a href="javascript:;">地理位置</a>
+          <a href="#local">地理位置</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <div class="container w1200">
+  <div class="banner-container w1200">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="test.html">
             <div class="slide-inner inner1">
               <div class="desc">
-                <p>文字介绍-1</p>
-                <p>文字介绍-2</p>
-                <p>文字介绍-3</p>
+
               </div>
             </div>
           </a>
@@ -219,7 +99,7 @@
           <a href="test.html">
             <div class="slide-inner inner2">
               <div class="desc">
-                <p>文字介绍-1</p>
+
               </div>
             </div>
           </a>
@@ -228,8 +108,7 @@
           <a href="test.html">
             <div class="slide-inner inner3">
               <div class="desc">
-                <p>文字介绍-1</p>
-                <p>文字介绍-2</p>
+
               </div>
             </div>
           </a>
@@ -239,28 +118,73 @@
       <div class="swiper-button-next"></div>
     </div>
   </div>
-
-  <div class="w1200 info">
-    <p>
-      安仁古镇总是让人想一去再去，不是因为满街的旗袍美女，也并非收藏着时光故事的老公馆，而是因为这里随处都有隐匿的惊喜，等待你走街串巷一一探索。在安仁的这些日子，小编逛遍了老街上的文艺小店，接下来就好好为各位看客说道说道。
-    </p>
+  <div class="w3l-button banner-btn">
+    <a href="#card1">领略广元</a>
   </div>
-  <!--泸州概况介绍-->
+
+
   <div class="js">
     <div class="h">
-      <h1>广元概况</h1>
+      <h1>广元简介</h1>
     </div>
-    <div class="w1200 info">
-      <p>美丽富饶的土地，生生不息的文化，孕肓了泸州人不屈不挠、奋发拼搏的精神品格。宋、元之际，蒙古军 入蜀，泸州筑城于合江神臂崖坚持抗战35年之久，“天生的重庆，铁打的泸州”由此而得名。中国工农红军四
-        渡赤水遗址、泸州起义指挥部、朱德纪念馆以及朱总司令亲笔题写的“救民水火”、“护国岩”等革命遗址已 成为爱国主义教育基地。
-        气候温和，五业兴旺。泸州北部为准南亚热带季风湿润气候，南部山区气候有中亚热带、北亚热带、南温 带和北温带气候之分，具有山区立体气候的特点。这里土地肥沃，物产富庶。具有春荣夏艳秋实冬秀的江南特
-        色。得天独厚的自然条件为农、林、牧、副、渔业提供良好的条件，是四川省的粮、猪、林、烟、果、中药材 等产品的重要生产基地。
+    <div class="w1200">
+      <p>
+        广元古称利州，地处四川省北部，毗邻陕西、甘肃两省，素有“川北门户、蜀道咽喉”之称，1985年经国务院批准成立地级市，辖苍溪、旺苍、剑阁、青川4县和利州、昭化、朝天3区，23个乡、112个镇、7个街道，幅员1.63万平方公里，总人口293.08万，幅员面积16318平方公里。
       </p>
-    </div class="w1200 info">
-    
+      <p>
+        广元历史悠久、文化厚重。是巴蜀文明的重要发祥地之一，7000年前就创造了中子细石器文化。迄今已有2300多年建城史，是先秦古栈道文化和蜀道文化的集中展现地、三国历史文化的核心走廊、中国历史上唯一女皇帝武则天的出生地，剑门蜀道列入世界自然与文化遗产预备名录。是原川陕苏区核心区域、后期首府所在地和红四方面军长征出发地。
+      </p>
+      <p>
+        广元区位独特、交通便捷。地处成都、重庆、西安、兰州四大城市几何中心，是规划的全国性综合交通枢纽，正加快建设国家物流枢纽承载城市。有5条高速公路、4条铁路在境内交汇，中欧班列渝新欧快铁、蓉欧快铁经过广元，县县通高速公路和铁路。目前在建高速公路项目共4个。其中，绵苍巴高速（绵苍和苍巴）广元境内段预计2023年底建成；G5京昆高速扩容广绵段预计2025年底建成；G5京昆高速扩容汉广段预计2026年底建成。广元机场开通17条国内城市航线，嘉陵江实现全江渠化通航，千吨轮船可直达重庆、上海，连接西南西北、通江达海的区域性立体综合交通枢纽初步建成。
+      </p>
+      <p>
+        广元环境优良、生态宜居。是嘉陵江上游重要生态屏障，城市环境空气质量优良天数常年保持在96%以上，PM2.5平均浓度常年保持在25以内，森林覆盖率57.76%。嘉陵江、白龙江、南河3条河流和白龙湖、亭子湖两个大型水库水质均达到Ⅰ类。建成国家级自然保护区2个、省级自然保护区6个，国家5A级旅游景区1个（剑门关）、4A级景区21个，是中国优秀旅游城市、国家森林城市、国家园林城市、国家卫生城市，入选2021年度中国最干净城市10强榜单，正加快建设践行绿水青山就是金山银山理念典范城市。
+      </p>
+      <p>
+        广元资源富集、潜力巨大。境内已探明可供工业采用的矿产30多种，天然气资源丰富，是中国西部重要的清洁能源利用基地、中国温泉之乡。是国家农产品质量安全市、四川省农产品产地无公害市，是世界红心猕猴桃原产地、全国最大标准化黄茶生产基地，四川最大的核桃、油橄榄、高山露地绿色蔬菜生产基地，苍溪红心猕猴桃、青川黑木耳、广元富硒茶、朝天核桃等“广元七绝”绿色农特产品远销国内外。
+      </p>
+      <p>
+        广元创新包容、开明开放。远在先秦时期，古蜀先民就在广元地区开凿出金牛古道连通天府之国与中原腹地，孕育了广元人民开放包容的历史基因。21世纪的今天，广元人民秉承开放合作优良传统，全面建设内陆开放高地，加强与长三角、珠三角、京津冀、成渝地区双城经济圈等合作对接，在阿曼苏丹国设立“广元馆”，引进世界500强、国内500强企业项目25个。
+      </p>
+    </div>
+
+
+    <div class="h">
+      <h1 id="local">地理位置</h1>
+    </div>
+    <div class="w1200 activity">
+      <h2>川北门户 蜀道咽喉</h2>
+      <div class="article">
+        <div class="indexImage"><img src="../assets/images/p1.png" alt="" /></div>
+        <div class="detail">
+          <p>
+            广元市，古称利州，四川省辖地级市，北与甘肃省、陕西省交界；南与南充市为邻；西与绵阳市相连；东与巴中市接壤；处于四川北部边缘，山地向盆地过渡地带，属于亚热带湿润季风气候，是嘉陵江上游重要生态屏障。全市总面积16319平方千米，辖3个区、4个县。截至2022年底，广元市常住人口227.1万人。广元市处于四川北部边缘，山地向盆地过渡地带，摩天岭、米仓山东西向横亘市北，分别为川甘、川陕界山；龙门山北东一南西向斜插市西；市南则由剑门山、大栏山等川北弧形山脉覆盖广。
+          </p>
+        </div>
+      </div>
+
+      <h2>古为利州 广我路元</h2>
+      <div class="article">
+        <div class="indexImage"><img src="../assets/images/p2.png" alt="" /></div>
+        <div class="detail">
+          <p>
+            历史悠久、文化厚重，是巴蜀文明的重要发祥地之一，7000多年前就创造了中子细石器文化，已有2300多年建城史，是先秦古栈道文化和蜀道文化的集中展现地、三国历史文化的核心走廊，中国历史上唯一女皇帝武则天的出生地。区位独特、交通便捷，有3条高速公路、4条铁路在境内交汇。境内有国家5A级旅游景区剑门关。剑门蜀道列入世界自然与文化遗产预备名录。是原川陕苏区核心区域、后期首府所在地和红四方面军长征出发地。
+          </p>
+        </div>
+      </div>
+
+      <h2>地处南麓 河谷深切</h2>
+      <div class="article">
+        <div class="indexImage"><img src="../assets/images/p3.png" alt="" /></div>
+        <div class="detail">
+          <p>
+            川北弧形山脉居元坝区、旺苍县城以南，及苍溪、剑阁两县全境。海拔从北而南由1200余米下降到600余米。河谷切割亦深，多呈“V”形。相对高差在200—500米间。山顶平缓，多呈台梁状，坡面一般在12度左右。广元市属于亚热带湿润季风气候；地处秦岭南麓，是南北的过渡带，既有南方的湿润气候特征，又有北方天高云淡、艳阳高照的特点。南部低山，冬冷夏热；北部中山区冬寒夏凉，秋季降温迅速。
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-  <!--概况介绍完-->
-  <br><br><br><br><br>
+
   <ul class="blocks w1200">
     <li>
       <a href="test.html">
@@ -270,7 +194,7 @@
           </div>
           <h1>历史文化</h1>
           <h2>特色节目&文化遗产</h2>
-          <p>相关介绍</p>
+          <p>广元，巴蜀文明发祥地之一</p>
         </div>
       </a>
     </li>
@@ -281,8 +205,8 @@
             <img src="../assets/images/02.jpg" />
           </div>
           <h1>名优特产</h1>
-          <h2>特色节目&文化遗产</h2>
-          <p>相关介绍</p>
+          <h2>特产小吃</h2>
+          <p>“广元七绝”之特产等</p>
         </div>
       </a>
     </li>
@@ -293,43 +217,54 @@
             <img src="../assets/images/03.jpg" />
           </div>
           <h1>风景名胜</h1>
-          <h2>特色节目&文化遗产</h2>
-          <p>相关介绍</p>
+          <h2>各处风景与名胜古迹</h2>
+          <p>深厚历史文化与丰富自然资源，是三国历史文化核心走廊</p>
         </div>
       </a>
     </li>
     <li>
-      <a href="test.html">
+      <a href="#local">
         <div class="card" id="card4">
           <div class="photo">
             <img src="../assets/images/04.jpg" />
           </div>
           <h1>地理位置</h1>
-          <h2>特色节目&文化遗产</h2>
-          <p>相关介绍</p>
+          <h2>广元地处</h2>
+          <p>四川北部边缘，川、陕、甘三省结合部，嘉陵江上游重镇</p>
         </div>
       </a>
     </li>
   </ul>
 
-  <br><br><br><br>
   <footer>
-    <div id="bottom">
-      Copyright © 2019 111111111. All rights reserved.&nbsp;&nbsp;
-      <a href="test.html">联系我们</a>
-      <a href="#top">回到顶部</a>
+    <div class="w1200 part">
+      <div id="bottom">
+        <p>版权所有 成都信息工程大学区块链产业学院</p>
+        <p>
+          <a href="#top">回到顶部</a>
+        </p>
+      </div>
+      <img src="../assets/images/logo.png" class="logo" />
     </div>
   </footer>
   <script src="../assets/js/swiper.min.js"></script>
   <script>
     var mySwiper = new Swiper(".swiper-container", {
-      autoplay: true, //可选选项，自动滑动
+      // autoplay: true, //可选选项，自动滑动
       loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
     });
+    // var anchorLink = document.querySelector("a[href='#local']"),
+    // target = document.getElementById("local");
+    // anchorLink.addEventListener("click", function (e) {
+    //   if (window.scrollTo) {
+    //     e.preventDefault();
+    //     window.scrollTo({ "behavior": "smooth", "top": target.offsetTop });
+    //   }
+    // })
   </script>
 </body>
 
